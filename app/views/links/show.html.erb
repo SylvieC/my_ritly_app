@@ -1,0 +1,15 @@
+
+
+
+ 
+ <p> The links you have used so far</p>
+ <div class="container">
+
+ <%= @links.each do |link| %>
+    <div>
+        <div><span class="former">Former url<%= link.old_value %></span> <span class="new">New Ritly url<%= link.new_value%></span></div> 
+    </div>
+  </div>
+
+ 
+<% end %> 
