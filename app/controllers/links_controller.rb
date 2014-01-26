@@ -37,7 +37,8 @@ end
 def go
   id1 = params[:id]
   link = Link.find(:id1)
-  id = link.random_string
+
+  id2 = link.url.slice(18,id2.length)
 end
 
 end

@@ -2,12 +2,10 @@
 
 
 
-   The url assigned to you is: <br>
+   Your code is: <h4><%= @link.random_string %></h4><br/>
+   Go to localhost:3000/go/<%= @link.random_string %> to visit your URL
 
-<%= @link.random_string %> 
+ <br>
 
-Paste it in your local brower, and it will direct you to the web site 
  
- For example, if the random string assigned to you is '3g543/?' for 'http://www.google.com', just enter 
- <p> localhost:3000/go/3g543/?' </p> 
- <p>and you will be directed to google.com</p>
+
