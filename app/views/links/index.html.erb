@@ -16,16 +16,17 @@
  <%= form_for :link,:url => link_create_path , method: :post do |f| %>
  <div class="request col-lg-12">
  <%= f.text_area :url, placeholder: 
-  "paste  here the link you want to change" %>
+  "Paste  here the link you want to change" %>
+  <br>
 </div>
-        
-   <p>Random 16 chararacter URL <%= f.radio_button :length, "" %></p> <br>
-   <p>Choose length <%= f.text_area :length, placeholder: "length" %>
-     <%= f.radio_button :length, "true" %></p> <br>
+
+    <span> 
+     <%= f.text_field  :lenght,  placeholder: "url length" %><br/>
+   </span>
     
     
 
-       <%=  f.submit "Request a new url" , class: "btn btn-danger" %>
+       <%=  f.submit "Request a new url" , class: "btn btn-danger btn-lg" %>
        
            
   

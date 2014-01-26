@@ -1,15 +1,12 @@
 
 
 
- 
- <p> The links you have used so far</p>
- <div class="container">
 
- <%= @links.each do |link| %>
-    <div>
-        <div><span class="former">Former url<%= link.old_value %></span> <span class="new">New Ritly url<%= link.new_value%></span></div> 
-    </div>
-  </div>
+   The url assigned to you is: <br>
 
+<%= @link.new_value %> 
+
+Paste it in your local brower, and it will direct you to the web site 
  
-<% end %> 
+ For example, if the random string assigned to you is '3g543/?' for 'http://www.google.com', just enter 
+ <p> localhost:3000/go/3g543/?' </p> and you will be directed to google.com
