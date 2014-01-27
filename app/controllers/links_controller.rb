@@ -35,11 +35,22 @@ end
 
 
 def go
-  id1 = params[:id]
-  link = Link.find(:id1)
-
-  id2 = link.url.slice(18,id2.length)
+  link_code = params[:link_code]
+  link = Link.find_by(random_string: link_code)
+  # link.visit_count += 1
+  # link.save
+  if !link.url.start_with?("http://")  && !link.url.start_with?("https://")
+    link.url = "http://" + link.url
+  end
+  redirect_to link.url
 end
+
+# def preview
+#   link_code = params[:link_code]
+#   link = Link.find_by(random_string: link_code)
+#   @link_url = link.url
+#   redirect_to @link_url
+# end
 
 end
 

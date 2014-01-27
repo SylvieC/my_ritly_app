@@ -1,34 +1,44 @@
 
 
 
-
- <div class="jumbotron">
+<div class="jumbotron">
   
+   <div class="container">
 
-  <h1>Welcome to Ritly</h1>
-     <p>Would you like to replace a url link by a new randomly generated one?</p>
+       <h1>Welcome to Ritly</h1>
+   </div> 
+    <div class="container">   
+          <div class="row">
+       <div class="col-xs-12">Would you like to replace a url link by a new randomly generated one?</p>
      <p>Just ask Ritly</p>
+   </br>
 
- 
+ </div>
 
 
 
  <%= form_for :link,:url => link_create_path , method: :post do |f| %>
- <div class="request col-lg-12">
- <%= f.text_area :url, placeholder: 
-  "Paste  here the link you want to change" %>
-  <br>
+ <div class="request">
+ <%= f.text_field :url, placeholder: 
+  "Paste  here the link you want to change",class: "col-xs-12" %>
+  
 </div>
+</br>
 
-    <span class="url"> 
-     <%= f.text_field  :lenght,  placeholder: "url length(optional)" %><br/>
-   </span>
-    
-    
+<div class="containner">
+  <div class="row">
+  	<div class=" col-sm-3 col-sm-offset-1">
+     
+     <%= f.text_field  :lenght,  placeholder: "url length(optional)" %>
+   </div>
 
-       <%=  f.submit "Request a new url" , class: "btn btn-danger btn-lg" %>
-       
-           
+	<div class="col-sm-5 col-sm-offset-2">
+ <%=  f.submit "Request a new url" , class: "btn btn-danger btn-lg" %>
+     </div>
+   </div>
+ </div>
+
+          
   
  <% end %>
 

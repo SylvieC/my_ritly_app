@@ -2,3 +2,11 @@
 	margin: 0 auto;
 	width: 600px;
 }
+
+.jumbotron {
+	text-align: center;
+}
+
+.textfield {
+	text-align: center;
+}
