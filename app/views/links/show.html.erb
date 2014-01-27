@@ -4,11 +4,11 @@
   	<div class="row">
 
    Your code is: <h4><%= @link.random_string %></h4><br/>
-   Go to localhost:3000/go/<%= @link.random_string %> to visit your URL
+   Go to <h4>localhost:3000/go/<%= @link.random_string %></h4> to visit your URL
 
  <br>
+<button class="btn btn-danger btn-md"><a href='/links/<%= @link.id %>/preview'>Preview the content of the link</a></button>
 
 </div>
 
  
-

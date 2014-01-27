@@ -6,9 +6,7 @@ MyRitlyApp::Application.routes.draw do
 
 post '/links', to: "links#create", as: 'link_create'
 get '/links/:id', to: 'links#show', as: 'show'
-# get '/go/:id1', to: ":id2"
-
+get '/links/:id/preview', to: 'links#preview'
 get '/go/:link_code', to: 'links#go'
-get '/go/:link_code/preview', to: 'links#preview'
 
 end

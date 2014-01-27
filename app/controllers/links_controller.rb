@@ -17,7 +17,7 @@ def create
    if length == nil
      random_string = SecureRandom.urlsafe_base64(10)
    else
-      random_string = SecureRandom.urlsafe_base64(length) 
+      random_string = SecureRandom.urlsafe_base64(length.to_i) 
   end
   
   new_link = Link.new
@@ -37,20 +37,20 @@ end
 def go
   link_code = params[:link_code]
   link = Link.find_by(random_string: link_code)
-  # link.visit_count += 1
-  # link.save
+    link.time_visited += 1
+    link.save
+   @link = link 
+
   if !link.url.start_with?("http://")  && !link.url.start_with?("https://")
     link.url = "http://" + link.url
   end
   redirect_to link.url
 end
 
-# def preview
-#   link_code = params[:link_code]
-#   link = Link.find_by(random_string: link_code)
-#   @link_url = link.url
-#   redirect_to @link_url
-# end
+def preview
+  id = params[:id]
+  @link = Link.find(id)
+end
 
 end
 

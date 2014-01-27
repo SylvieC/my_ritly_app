@@ -11,13 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140125150323) do
+ActiveRecord::Schema.define(version: 20140127143143) do
 
   create_table "links", force: true do |t|
     t.string   "url"
     t.string   "random_string"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "times_visited"
   end
 
 end
