@@ -6,7 +6,8 @@ Rails app a bit similar to bitly.
 The user enters a url and he is given a shorten one.
 
 Instructions
-Ritly
+===========
+
 You are going to build an app similar to Bitly, called Ritly. The challenge is going to be understanding the flow of control in a Rails app.
 
 Description of App
