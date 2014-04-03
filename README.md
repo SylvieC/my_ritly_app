@@ -51,4 +51,4 @@ Allow the user creating the redirect to give a string to use as the shortened st
 Make the preview page contain a preview of the content at the url, not just the target url.
 
 Make everything gorgeous.
-link to the instructions: [[https://gist.github.com/rsofaer/270f3dc82543826a3c10]]
+link to the instructions: [https://gist.github.com/rsofaer/270f3dc82543826a3c10]
