@@ -1,11 +1,11 @@
 MyRitlyApp::Application.routes.draw do
 
  
+root to: "links#index", as: 'links'
 resources  :users, :sessions
 
 
 
-root to: "links#index", as: 'links'
 
 get '/signup', to: 'users#new'
 match '/signout', to: 'sessions#destroy', via: :delete

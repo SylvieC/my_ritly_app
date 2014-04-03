@@ -5,6 +5,7 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
+    redirect_to links_path
   end
 
   def create
@@ -18,7 +19,7 @@ class UsersController < ApplicationController
       # TODO - implement sign_in method
       sign_in user
 
-      redirect_to user
+      redirect_to links_path
     else
       render :new
     end
