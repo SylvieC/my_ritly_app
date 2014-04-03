@@ -1,16 +1,22 @@
-<nav class="navbar navbar-inverse" role="navigation">
-  <!-- Brand and toggle get grouped for better mobile display -->
-  <div class="navbar-header">
-   
-
-   
-    <a class="navbar-brand" href="/">Home</a>
-
-
+<header class="navbar navbar-fixed-top navbar-inverse">
+  <div class="navbar-inner">
+    <div class="container">
+      <nav>
+        <ul class="nav pull-left">
+          <li><h4>Home</h4></li>
+        </ul>
+        <ul class="nav pull-right">
+            <% if signed_in? %>
+              <li><%= link_to "My profile", current_user %></li>
+              <li>
+                <%= link_to "Sign out", signout_path, method: "delete" %>
+              </li>
+            <% else %>
+              <li><%= link_to "Sign up", signup_path %></li>
+              <li><%= link_to "Sign in", signin_path %></li>
+            <% end %>
+        </ul>
+      </nav>
+    </div>
   </div>
-
-    
- 
-
-</nav>
-
+</header>

@@ -1,14 +1,14 @@
 class LinksController < ApplicationController
+before_filter :signed_in_user, only: [:create, :new, :edit, :update]
 
-
-def index
+ def index
 	@links = Link.all
-end
+ end
 
-def new
-end
+ def new
+ end
 
-def create
+ def create
   link_params = params.require(:link).permit(:length)
   length = link_params[:length]
    url_params = params.require(:link).permit(:url)
@@ -21,20 +21,21 @@ def create
   end
   
   new_link = Link.new
+  new_link["times_visited"] = 0
   new_link['url'] = url  #is it ok to write instead new_link.url = url....
   new_link['random_string'] = random_string
   @link = new_link
   @link.save 
   redirect_to show_path(@link.id)
-end
+ end
 
-def show
+ def show
   id = params[:id]
   @link = Link.find(id)
-end
+ end
 
 
-def go
+ def go
   link_code = params[:link_code]
   link = Link.find_by(random_string: link_code)
     link.time_visited += 1
@@ -45,14 +46,16 @@ def go
     link.url = "http://" + link.url
   end
   redirect_to link.url
+ end
+
+ def preview
+   id = params[:id]
+   @link = Link.find(id)
+ end
 end
 
-def preview
-  id = params[:id]
-  @link = Link.find(id)
-end
 
-end
+
 
 
 
