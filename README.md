@@ -26,13 +26,6 @@ Here are a few hints.
 
 The URLs Table
 
-id  link  random_string created at  updated at
-1 http://www.generalassemb.ly m1gpLHq8aoY Wed, 19 Jun 2013 21:23:30 UTC +00:00  Wed, 19 Jun 2013 21:23:30 UTC +00:00
-2 http://www.google.com T7DViXiIxFE Wed, 19 Jun 2013 21:25:32 UTC +00:00  Wed, 19 Jun 2013 21:25:32 UTC +00:00
-3 http://www.bustedtees.com pxMpvdB8LRw Wed, 19 Jun 2013 21:23:30 UTC +00:00  Wed, 19 Jun 2013 21:23:30 UTC +00:00
-The Routes
-Think about the different pages and actions that exist on Ritly.
-
 Make sure you have a root
 Allow new URLs to be created and displayed
 URL redirection and URL previewing are separate actions
@@ -58,3 +51,4 @@ Allow the user creating the redirect to give a string to use as the shortened st
 Make the preview page contain a preview of the content at the url, not just the target url.
 
 Make everything gorgeous.
+link to the instructions: [[https://gist.github.com/rsofaer/270f3dc82543826a3c10]]
